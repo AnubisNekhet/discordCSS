@@ -1,0 +1,48 @@
+@import url("https://snare-hawk.github.io/snare-CSS/profile-panel-thingy.css");
+
+.panels-3wFtMD {
+  --spotify-vencord-wave-width: 230px;
+}
+
+.panels-3wFtMD button {
+  padding: 0;
+}
+
+#vc-spotify-player + .container-YkUktl button {
+  background: #00000011;
+}
+
+#vc-spotify-player + .container-YkUktl button:hover {
+    color: var(--interactive-hover);
+    background-color: #00000022 !important;
+}
+
+#vc-spotify-player::before {
+  margin-left: 5px;
+}
+
+#vc-spotify-info-wrapper::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    z-index: -1;
+    width: var(--spotify-vencord-wave-width);
+    margin-top: -40px;
+    left: 0;
+    background: var(--spotify-vencord-color);
+    opacity: 1;
+    margin-left: 5px;
+}
+
+#vc-spotify-album-expanded-wrapper::before {
+    content: "";
+    position: absolute;
+    height: 25px;
+    z-index: -1;
+    width: var(--spotify-vencord-wave-width);
+    margin-top: -7px;
+    left: 0;
+    background: var(--spotify-vencord-color);
+    opacity: 1;
+    margin-left: 5px;
+}
