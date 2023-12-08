@@ -1,0 +1,202 @@
+/**
+ * @name Spotify Couve Tweak
+ * @author anubis
+ * @version 1.0.0
+ * @description Tweak
+ * @source Vencord #css-snippets
+ */
+:root {
+  --spotify-color: var(--brand-experiment); /* brand-experiment */
+  --spotify-bg-color: var(--background-tertiary); /* background-tertiary */
+  --spotify-text-color: var(--header-primary); /* header-primary */
+  --spotify-subtext-color: var(--text-normal); /* text-normal */
+  --gradient-start-opacity: 0.6;
+  --gradient-end-opacity: 0.3;
+}
+:root #vc-spotify-player {
+  position: relative;
+  border-bottom: none;
+  padding: 0;
+  --vc-spotify-green: var(--spotify-color);
+}
+
+/* Album image & infos */
+:root #vc-spotify-info-wrapper {
+  padding: 0.375rem 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+:root #vc-spotify-info-wrapper #vc-spotify-album-image {
+  height: 100%;
+}
+
+:root #vc-spotify-album-expanded-wrapper {
+  position: relative;
+  z-index: 1;
+  padding: 0.375rem 0.5rem;
+}
+
+:root #vc-spotify-album-expanded-wrapper > img {
+  border-radius: 8px;
+}
+
+/* Progress bar */
+:root #vc-spotify-info-wrapper + #vc-spotify-progress-bar {
+  position: static;
+  margin: 0;
+}
+
+:root #vc-spotify-info-wrapper + #vc-spotify-progress-bar [class^="slider"] {
+  position: static;
+  height: 100%;
+}
+
+:root
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  [class^="slider"]
+  [class^="bar"] {
+  position: absolute;
+  top: 0;
+  height: 61px !important;
+  width: 100%;
+  border-radius: 0;
+  transition: height 200ms;
+}
+
+:root
+  #vc-spotify-player
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  [class^="slider"]
+  [class^="bar"] {
+  height: 165px !important;
+  background-color: var(--spotify-bg-color);
+}
+[class^="avatarWrapper"] {
+  z-index: 20;
+}
+
+:root
+  #vc-spotify-player
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  [class^="slider"]
+  [class^="barFill"] {
+  background-color: var(--spotify-color);
+  -webkit-mask-image: linear-gradient(
+    0.25turn,
+    rgba(0, 0, 0, var(--gradient-start-opacity)),
+    rgba(0, 0, 0, var(--gradient-end-opacity))
+  ) !important;
+  mask-image: linear-gradient(
+    0.25turn,
+    rgba(0, 0, 0, var(--gradient-start-opacity)),
+    rgba(0, 0, 0, var(--gradient-end-opacity))
+  ) !important;
+  border-radius: 0;
+}
+
+:root
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  .vc-spotify-progress-time {
+  opacity: 0;
+  background: var(--background-primary);
+  background-color: #252a3e55;
+  transition: opacity 0.1s ease-in-out;
+  border-radius: 5px;
+  padding: 2px;
+  z-index: 20;
+  top: 65px;
+  min-width: 28px;
+  text-align: center;
+}
+:root
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  .vc-spotify-progress-time[aria-label="Total Duration"] {
+  right: 7px;
+}
+:root
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  .vc-spotify-progress-time[aria-label="Progress"] {
+  left: 7px;
+}
+:root
+  #vc-spotify-player:hover
+  #vc-spotify-info-wrapper
+  + #vc-spotify-progress-bar
+  .vc-spotify-progress-time {
+  opacity: 1;
+}
+:root .vc-spotify-button-row {
+  position: relative;
+  z-index: 1;
+}
+
+:root #vc-spotify-progress-bar [class^="sliderContainer"] [class^="grabber"] {
+  top: 0;
+  height: 100% !important;
+  border-radius: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+:root #vc-spotify-album-expanded-wrapper + #vc-spotify-progress-bar {
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+:root
+  #vc-spotify-album-expanded-wrapper
+  + #vc-spotify-progress-bar
+  [class^="slider"]
+  [class^="bar"] {
+  top: 3px;
+  height: 20px !important;
+}
+
+:root
+  #vc-spotify-album-expanded-wrapper
+  + #vc-spotify-progress-bar
+  .vc-spotify-time-left {
+  left: 0.5rem;
+}
+
+:root
+  #vc-spotify-album-expanded-wrapper
+  + #vc-spotify-progress-bar
+  .vc-spotify-time-right {
+  right: 0.5rem;
+}
+
+h3 > [class^="overflow"] {
+  text-transform: capitalize;
+}
+
+:root
+  .guilds-2JjMmN.guilds-2JjMmN
+  .scroller-3X7KbA
+  .listItem-3SmSlK
+  .lowerBadge-3j0ZAg
+  .numberBadge-37OJ3S {
+  background: var(--status-danger) !important;
+  color: var(--background-primary);
+  font-weight: bold !important;
+  font-size: 10px;
+}
+#vc-spotify-player + div button,
+#vc-spotify-player button,
+.vc-spotify-artist,
+.vc-spotify-album,
+#vc-spotify-player + div [class^="hoverRoll"] {
+  color: var(--spotify-text-color);
+  --interactive-normal: var(--spotify-text-color);
+}
+
+.title__10613 {
+  color: var(--spotify-text-color);
+}
