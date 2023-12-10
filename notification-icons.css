@@ -5,7 +5,7 @@
  * @description Tweak
  * @source Vencord #css-snippets
  */
-[aria-label="Inbox"] [role="tablist"] > div::before {
+[aria-label=Inbox] [role=tablist] > div::before {
   content: "";
   width: 20px;
   height: 20px;
@@ -14,22 +14,12 @@
   -webkit-mask-size: contain;
   -webkit-mask-repeat: none;
 }
-[aria-label="Inbox"]
-  [role="tablist"]
-  > div[aria-label="Mentions"][aria-label="Mentions"]::before,
-[aria-label="Inbox"] [role="tablist"] > div:nth-child(1)::before {
+[aria-label=Inbox] [role=tablist] > div[aria-label=Mentions][aria-label=Mentions]::before, [aria-label=Inbox] [role=tablist] > div:nth-child(1)::before {
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWF0LXNpZ24iPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjQiLz48cGF0aCBkPSJNMTYgOHY1YTMgMyAwIDAgMCA2IDB2LTFhMTAgMTAgMCAxIDAtNCA4Ii8+PC9zdmc+");
 }
-[aria-label="Inbox"]
-  [role="tablist"]
-  > div[aria-label="For You"][aria-label="For You"]
-  + div::before,
-[aria-label="Inbox"] [role="tablist"] > div:nth-child(2)::before {
+[aria-label=Inbox] [role=tablist] > div[aria-label="For You"][aria-label="For You"] + div::before, [aria-label=Inbox] [role=tablist] > div:nth-child(2)::before {
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWFsZXJ0LWNpcmNsZSI+PGNpcmNsZSBjeD0iMTIiIGN5PSIxMiIgcj0iMTAiLz48bGluZSB4MT0iMTIiIHgyPSIxMiIgeTE9IjgiIHkyPSIxMiIvPjxsaW5lIHgxPSIxMiIgeDI9IjEyLjAxIiB5MT0iMTYiIHkyPSIxNiIvPjwvc3ZnPg==");
 }
-[aria-label="Inbox"]
-  [role="tablist"]
-  > div[aria-label="For You"][aria-label="For You"]::before,
-[aria-label="Inbox"] [role="tablist"] > div:nth-child(3)::before {
+[aria-label=Inbox] [role=tablist] > div[aria-label="For You"][aria-label="For You"]::before, [aria-label=Inbox] [role=tablist] > div:nth-child(3)::before {
   -webkit-mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLWluYm94Ij48cG9seWxpbmUgcG9pbnRzPSIyMiAxMiAxNiAxMiAxNCAxNSAxMCAxNSA4IDEyIDIgMTIiLz48cGF0aCBkPSJNNS40NSA1LjExIDIgMTJ2NmEyIDIgMCAwIDAgMiAyaDE2YTIgMiAwIDAgMCAyLTJ2LTZsLTMuNDUtNi44OUEyIDIgMCAwIDAgMTYuNzYgNEg3LjI0YTIgMiAwIDAgMC0xLjc5IDEuMTF6Ii8+PC9zdmc+");
 }
