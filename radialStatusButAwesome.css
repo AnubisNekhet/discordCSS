@@ -2,7 +2,7 @@
   --vc-platform-spacing: var(--rs-medium-spacing);
   --vc-platform-width: var(--rs-small-width);
 }
-.contents_f41bb2:has(img)::before {
+.contents_f41bb2:has(.avatar__08316)::before {
   content: "";
   width: calc(40px + 2 * var(--vc-platform-spacing));
   height: calc(40px + 2 * var(--vc-platform-spacing));
