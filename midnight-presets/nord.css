@@ -1,0 +1,18 @@
+:root {
+  --text-1: #eceff4;
+  --text-2: #e5e9f0;
+  --text-3: #d9dee8;
+  --text-4: #c4c9d4;
+  --text-5: #acb4c3;
+  --bg-1: #434c5e;
+  --bg-2: #3b4252;
+  --bg-3: #2e3440;
+  --bg-4: #272b35;
+  --accent-1: hsl(193, 43%, 67%);
+  --accent-2: hsl(193, 43%, 59%);
+  --accent-3: hsl(193, 43%, 51%);
+  --accent-4: hsl(193, 43%, 43%);
+  --accent-5: hsl(193, 43%, 35%);
+  --mention: hsla(193, 43%, 51%, 0.1);
+  --mention-hover: hsla(193, 43%, 51%, 0.05);
+}
