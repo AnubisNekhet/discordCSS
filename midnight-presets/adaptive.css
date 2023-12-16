@@ -1,0 +1,166 @@
+/**
+ * @name midnight (adaptive)
+ * @description A darkened discord theme.
+ * @author refact0r
+ * @version 1.6.1
+ * @source https://github.com/refact0r/midnight-discord
+ * @authorId 508863359777505290
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+
+@import url("https://refact0r.github.io/midnight-discord/midnight.css");
+
+/* customize things here */
+:root {
+  /* font, change to 'gg sans' for default discord font*/
+  --font: "figtree";
+
+  /* color of green online dot, change to #23a55a for default green */
+  --online-indicator: var(--accent-2);
+
+  /* top left corner text */
+  --corner-text: "Midnight";
+  /* accent colors */
+  --accent-1: hsl(
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 4 + 52%)
+  ); /* links */
+  --accent-2: hsl(
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 4 + 39%)
+  ); /* general unread/mention elements */
+  --accent-3: hsl(
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 2 + 26%)
+  ); /* accent buttons */
+  --accent-4: hsl(
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 2 + 13%)
+  ); /* accent buttons when hovered */
+  --accent-5: hsl(
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 2)
+  ); /* accent buttons when clicked */
+  --mention: hsla(41, 86%, 66%, 0.1); /* mentions & mention messages */
+  --mention-hover: hsla(
+    41,
+    86%,
+    66%,
+    0.05
+  ); /* mentions & mention messages when hovered */
+
+  /* text colors */
+  --text-1: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2 + 50%)
+  ); /* bright text on colored elements */
+  --text-2: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2 + 40%)
+  ); /* headings and important text */
+  --text-3: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2 + 30%)
+  ); /* normal text */
+  --text-4: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2 + 20%)
+  ); /* icon buttons and channels */
+  --text-5: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2 + 10%)
+  ); /* muted channels/chats and timestamps */
+
+  --text-on-accent: var(--bg-4); /* muted channels/chats and timestamps */
+
+  /* background and dark colors */
+  --bg-1: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2.5)
+  ); /* dark buttons when clicked */
+  --bg-2: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 2)
+  ); /* dark buttons */
+  --bg-3: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 1.5)
+  ); /* spacing, secondary elements */
+  --bg-4: hsl(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    var(--theme-l)
+  ); /* main background color */
+  --hover: hsla(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 1.5),
+    0.1
+  ); /* channels and buttons when hovered */
+  --active: hsla(
+    var(--theme-h),
+    calc(var(--theme-s) / 2),
+    calc(var(--theme-l) * 1.5),
+    0.2
+  ); /* channels and buttons when clicked or selected */
+  --message-hover: hsla(
+    var(--theme-h),
+    0%,
+    0%,
+    0.1
+  ); /* messages when hovered */
+
+  /* amount of spacing and padding */
+  --spacing: 12px;
+
+  /* animations */
+  --hover-push: 0.2s ease; /* channels/members when hovered */
+
+  /* corner roundness (border-radius) */
+  --roundness-xl: 22px; /* roundness of big panel outer corners */
+  --roundness-l: 20px; /* popout panels */
+  --roundness-m: 16px; /* smaller panels, images, embeds */
+  --roundness-s: 12px; /* members, settings inputs */
+  --roundness-xs: 10px; /* channels, buttons */
+  --roundness-xxs: 8px; /* searchbar, small elements */
+
+  /* direct messages moon icon */
+  /* change to block to show, none to hide */
+  --discord-icon: none; /* discord icon */
+  --moon-icon: block; /* moon icon */
+  --moon-icon-url: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLXNwYXJrbGVzIj48cGF0aCBkPSJtMTIgMy0xLjkxMiA1LjgxM2EyIDIgMCAwIDEtMS4yNzUgMS4yNzVMMyAxMmw1LjgxMyAxLjkxMmEyIDIgMCAwIDEgMS4yNzUgMS4yNzVMMTIgMjFsMS45MTItNS44MTNhMiAyIDAgMCAxIDEuMjc1LTEuMjc1TDIxIDEybC01LjgxMy0xLjkxMmEyIDIgMCAwIDEtMS4yNzUtMS4yNzVMMTIgM1oiLz48cGF0aCBkPSJNNSAzdjQiLz48cGF0aCBkPSJNMTkgMTd2NCIvPjxwYXRoIGQ9Ik0zIDVoNCIvPjxwYXRoIGQ9Ik0xNyAxOWg0Ii8+PC9zdmc+");
+
+  /* filter uncolorable elements to fit theme */
+  /* (just set to none, they're too much work to configure) */
+  --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+  --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+  --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84)
+    brightness(1.2); /* add friend page school icon */
+}
+.childWrapper__01b9c:has(> svg:not(.favoriteIcon__91c06))::before {
+  -webkit-mask-repeat: none;
+  -webkit-mask-size: contain;
+}
+.wrapper_d281dd:hover > .childWrapper__01b9c::before,
+.wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
+  background: var(--text-on-accent);
+}
+.numberBadge__50328,
+.lookFilled__19298.colorBrand_b2253e,
+.iconBadge_fdf33a.isCurrentUserConnected_d9734f {
+  color: var(--text-on-accent);
+}
