@@ -61,7 +61,7 @@
   ); /* mentions & mention messages when hovered */
 
   /* text colors */
-  --text-0: var(--bg-4); /* text on colored elements */
+  --text-0: var(--text-1); /* text on colored elements */
   --text-1: hsl(
     var(--theme-h),
     calc(var(--theme-s) / 2),
@@ -150,7 +150,8 @@
 
   /* filter uncolorable elements to fit theme */
   /* (just set to none, they're too much work to configure) */
-  --login-bg-filter: none; /* login background artwork */
-  --green-to-accent-3-filter: none; /* add friend page explore icon */
-  --blurple-to-accent-3-filter: none; /* add friend page school icon */
+  --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
+  --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
+  --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84)
+    brightness(1.2); /* add friend page school icon */
 }
