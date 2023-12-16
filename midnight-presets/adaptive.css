@@ -1,7 +1,7 @@
 /**
  * @name midnight (adaptive)
  * @description A darkened discord theme.
- * @author refact0r
+ * @author refact0r, anubis
  * @version 1.6.1
  * @source https://github.com/refact0r/midnight-discord
  * @authorId 508863359777505290
@@ -14,7 +14,7 @@
 /* customize things here */
 :root {
   /* font, change to 'gg sans' for default discord font*/
-  --font: "figtree";
+  --font: "Iosevka Comfy Duo", "Noto Emoji", "figtree";
 
   /* color of green online dot, change to #23a55a for default green */
   --online-indicator: var(--accent-2);
@@ -47,11 +47,16 @@
     var(--theme-s),
     calc(var(--theme-l) * 2)
   ); /* accent buttons when clicked */
-  --mention: hsla(41, 86%, 66%, 0.1); /* mentions & mention messages */
+  --mention: hsla(
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 2 + 26%),
+    0.1
+  ); /* mentions & mention messages */
   --mention-hover: hsla(
-    41,
-    86%,
-    66%,
+    var(--theme-h),
+    var(--theme-s),
+    calc(var(--theme-l) * 2 + 26%),
     0.05
   ); /* mentions & mention messages when hovered */
 
