@@ -61,11 +61,12 @@
   ); /* mentions & mention messages when hovered */
 
   /* text colors */
+  --text-0: var(--bg-4); /* text on colored elements */
   --text-1: hsl(
     var(--theme-h),
     calc(var(--theme-s) / 2),
     calc(var(--theme-l) * 2 + 50%)
-  ); /* bright text on colored elements */
+  ); /* other normally white text */
   --text-2: hsl(
     var(--theme-h),
     calc(var(--theme-s) / 2),
@@ -86,8 +87,6 @@
     calc(var(--theme-s) / 2),
     calc(var(--theme-l) * 2 + 10%)
   ); /* muted channels/chats and timestamps */
-
-  --text-on-accent: var(--bg-4); /* muted channels/chats and timestamps */
 
   /* background and dark colors */
   --bg-1: hsl(
@@ -151,21 +150,7 @@
 
   /* filter uncolorable elements to fit theme */
   /* (just set to none, they're too much work to configure) */
-  --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
-  --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
-  --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84)
-    brightness(1.2); /* add friend page school icon */
-}
-.childWrapper__01b9c:has(> svg:not(.favoriteIcon__91c06))::before {
-  -webkit-mask-repeat: none;
-  -webkit-mask-size: contain;
-}
-.wrapper_d281dd:hover > .childWrapper__01b9c::before,
-.wrapper_d281dd.selected_f5ec8e > .childWrapper__01b9c::before {
-  background: var(--text-on-accent);
-}
-.numberBadge__50328,
-.lookFilled__19298.colorBrand_b2253e,
-.iconBadge_fdf33a.isCurrentUserConnected_d9734f {
-  color: var(--text-on-accent);
+  --login-bg-filter: none; /* login background artwork */
+  --green-to-accent-3-filter: none; /* add friend page explore icon */
+  --blurple-to-accent-3-filter: none; /* add friend page school icon */
 }

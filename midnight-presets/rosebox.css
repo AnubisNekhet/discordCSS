@@ -37,7 +37,8 @@
   ); /* mentions & mention messages when hovered */
 
   /* text colors */
-  --text-1: hsl(223, 4%, 65%); /* bright text on colored elements */
+  --text-0: hsl(0, 0%, 14%); /* text on colored elements */
+  --text-1: hsl(223, 4%, 65%); /* other normally white text */
   --text-2: hsl(228, 4%, 55%); /* headings and important text */
   --text-3: hsl(220, 4%, 45%); /* normal text */
   --text-4: hsl(0, 0%, 36%); /* icon buttons and channels */
