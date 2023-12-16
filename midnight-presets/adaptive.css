@@ -25,12 +25,12 @@
   --accent-1: hsl(
     var(--theme-h),
     var(--theme-s),
-    calc(var(--theme-l) * 4 + 52%)
+    calc(var(--theme-l) * 4 + 40%)
   ); /* links */
   --accent-2: hsl(
     var(--theme-h),
     var(--theme-s),
-    calc(var(--theme-l) * 4 + 39%)
+    calc(var(--theme-l) * 4 + 33%)
   ); /* general unread/mention elements */
   --accent-3: hsl(
     var(--theme-h),
