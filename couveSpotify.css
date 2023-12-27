@@ -173,10 +173,6 @@
   right: 0.5rem;
 }
 
-h3 > [class^="overflow"] {
-  text-transform: capitalize;
-}
-
 :root
   .guilds-2JjMmN.guilds-2JjMmN
   .scroller-3X7KbA
