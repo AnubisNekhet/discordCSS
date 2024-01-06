@@ -197,6 +197,12 @@ h3 > [class^="overflow"] {
   --interactive-normal: var(--spotify-text-color);
 }
 
+#vc-spotify-player .vc-spotify-repeat-context,
+#vc-spotify-player .vc-spotify-repeat-track,
+#vc-spotify-player .vc-spotify-shuffle-on {
+  color: var(--spotify-color);
+}
+
 .title__10613 {
   color: var(--spotify-text-color);
 }
