@@ -21,112 +21,32 @@
 
   /* top left corner text */
   --corner-text: "Midnight";
+
   /* accent colors */
-  --accent-1: hsl(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2 + 43%)
-  ); /* links */
-  --accent-2: hsl(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2 + 33%)
-  ); /* general unread/mention elements */
-  --accent-3: hsl(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2 + 26%)
-  ); /* accent buttons */
-  --accent-4: hsl(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2 + 13%)
-  ); /* accent buttons when hovered */
-  --accent-5: hsl(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2)
-  ); /* accent buttons when clicked */
-  --mention: hsla(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2 + 26%),
-    0.1
-  ); /* mentions & mention messages */
-  --mention-hover: hsla(
-    var(--theme-h, 210),
-    var(--theme-s, 17%),
-    calc(var(--theme-l, 9%) * 2 + 26%),
-    0.05
-  ); /* mentions & mention messages when hovered */
+  --accent-1: hsl(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2 + 43%)); /* links */
+  --accent-2: hsl(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2 + 33%)); /* general unread/mention elements */
+  --accent-3: hsl(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2 + 26%)); /* accent buttons */
+  --accent-4: hsl(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2 + 13%)); /* accent buttons when hovered */
+  --accent-5: hsl(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2)); /* accent buttons when clicked */
+  --mention: hsla(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2 + 26%),0.1); /* mentions & mention messages */
+  --mention-hover: hsla(var(--theme-h, 210),var(--theme-s, 17%),calc(var(--theme-l, 9%) * 2 + 26%),0.05); /* mentions & mention messages when hovered */
 
   /* text colors */
   --text-0: var(--text-1); /* text on colored elements */
-  --text-1: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2 + 50%)
-  ); /* other normally white text */
-  --text-2: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2 + 40%)
-  ); /* headings and important text */
-  --text-3: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2 + 30%)
-  ); /* normal text */
-  --text-4: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2 + 20%)
-  ); /* icon buttons and channels */
-  --text-5: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2 + 10%)
-  ); /* muted channels/chats and timestamps */
+  --text-1: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2 + 50%)); /* other normally white text */
+  --text-2: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2 + 40%)); /* headings and important text */
+  --text-3: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2 + 30%)); /* normal text */
+  --text-4: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2 + 20%)); /* icon buttons and channels */
+  --text-5: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2 + 10%)); /* muted channels/chats and timestamps */
 
   /* background and dark colors */
-  --bg-1: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2.5)
-  ); /* dark buttons when clicked */
-  --bg-2: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 2)
-  ); /* dark buttons */
-  --bg-3: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 1.5)
-  ); /* spacing, secondary elements */
-  --bg-4: hsl(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    var(--theme-l, 9%)
-  ); /* main background color */
-  --hover: hsla(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 1.5),
-    0.1
-  ); /* channels and buttons when hovered */
-  --active: hsla(
-    var(--theme-h, 210),
-    calc(var(--theme-s, 17%) / 2),
-    calc(var(--theme-l, 9%) * 1.5),
-    0.2
-  ); /* channels and buttons when clicked or selected */
-  --message-hover: hsla(
-    var(--theme-h, 210),
-    0%,
-    0%,
-    0.1
-  ); /* messages when hovered */
+  --bg-1: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2.5)); /* dark buttons when clicked */
+  --bg-2: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 2)); /* dark buttons */
+  --bg-3: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 1.5)); /* spacing, secondary elements */
+  --bg-4: hsl(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),var(--theme-l, 9%)); /* main background color */
+  --hover: hsla(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 1.5),0.1); /* channels and buttons when hovered */
+  --active: hsla(var(--theme-h, 210),calc(var(--theme-s, 17%) / 2),calc(var(--theme-l, 9%) * 1.5),0.2); /* channels and buttons when clicked or selected */
+  --message-hover: hsla(var(--theme-h, 210),0%,0%,0.1); /* messages when hovered */
 
   /* amount of spacing and padding */
   --spacing: 12px;
@@ -150,8 +70,7 @@
 
   /* filter uncolorable elements to fit theme */
   /* (just set to none, they're too much work to configure) */
-  --login-bg-filter: saturate(0.3) hue-rotate(-15deg) brightness(0.4); /* login background artwork */
-  --green-to-accent-3-filter: hue-rotate(56deg) saturate(1.43); /* add friend page explore icon */
-  --blurple-to-accent-3-filter: hue-rotate(304deg) saturate(0.84)
-    brightness(1.2); /* add friend page school icon */
+  --login-bg-filter: none; /* login background artwork */
+  --green-to-accent-3-filter: none; /* add friend page explore icon */
+  --blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
