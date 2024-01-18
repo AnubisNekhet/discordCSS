@@ -1,0 +1,185 @@
+/* ==UserStyle==
+@name midnight (catppuccin)
+@namespace midnight-catppuccin
+@description Reavmped UserCSS port ofr midnight
+@author refact0r, anubis
+@version 1.6.2
+@preprocessor less
+@source https://github.com/refact0r/midnight-discord
+@authorId 508863359777505290
+@vc-requiredPlugins ThemeAttributes
+@var select flavor "Flavor" ["frappe","macchiato","mocha*","kanagawa","nord","nordx","biscuit","rosebox","gruvbox","solarized","material-mint", "adaptive"]
+@var select accentColor "Accent" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve*", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var select contrastColor "Contrast" ["rosewater:Rosewater", "flamingo:Flamingo", "pink:Pink", "mauve:Mauve", "red:Red", "maroon:Maroon", "peach:Peach", "yellow:Yellow", "green:Green*", "teal:Teal", "blue:Blue", "sapphire:Sapphire", "sky:Sky", "lavender:Lavender", "subtext0:Gray"]
+@var text font "Font" figtree
+@var text corner-text "Corner Text" midnight
+@var checkbox online-indicator "Online indicator uses accent color" 0
+@var checkbox responsive "Responsive Member List" 0
+@var checkbox invert-bg "Invert backgrounds" 0
+==/UserStyle== */
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
+
+/* customize things here */
+:root {
+	/* font, change to 'gg sans' for default discord font*/
+	--font: @font, 'figtree';
+
+	/* top left corner text */
+	--corner-text: @corner-text;
+
+	/* amount of spacing and padding */
+	--spacing: 12px;
+
+	/* animations */
+	--hover-push: 0.2s ease; /* channels/members when hovered */
+
+	/* corner roundness (border-radius) */
+	--roundness-xl: 22px; /* roundness of big panel outer corners */
+	--roundness-l: 20px; /* popout panels */
+	--roundness-m: 16px; /* smaller panels, images, embeds */
+	--roundness-s: 12px; /* members, settings inputs */
+	--roundness-xs: 10px; /* channels, buttons */
+	--roundness-xxs: 8px; /* searchbar, small elements */
+
+	/* direct messages moon icon */
+	/* change to block to show, none to hide */
+	--discord-icon: none; /* discord icon */
+	--moon-icon: none; /* moon icon */
+	--moon-icon-url: none; /* custom icon url */
+	--moon-icon-size: auto;
+}
+/* catppuccin icon */
+.childWrapper__01b9c:has(> svg:not(.favoriteIcon_adf80e)) {
+	background: url('https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png');
+	background-color: transparent !important;
+	background-size: cover;
+}
+
+@catppuccin: {
+  @latte:         { @rosewater: #dc8a78; @flamingo: #dd7878; @pink: #ea76cb; @mauve: #8839ef; @red: #d20f39; @maroon: #e64553; @peach: #fe640b; @yellow: #df8e1d; @green: #40a02b; @teal: #179299; @sky: #04a5e5; @sapphire: #209fb5; @blue: #1e66f5; @lavender: #7287fd; @text: #4c4f69; @subtext1: #5c5f77; @subtext0: #6c6f85; @overlay2: #7c7f93; @overlay1: #8c8fa1; @overlay0: #9ca0b0; @surface2: #acb0be; @surface1: #bcc0cc; @surface0: #ccd0da; @base: #eff1f5; @mantle: #e6e9ef; @crust: #dce0e8; };
+  @frappe:        { @rosewater: #f2d5cf; @flamingo: #eebebe; @pink: #f4b8e4; @mauve: #ca9ee6; @red: #e78284; @maroon: #ea999c; @peach: #ef9f76; @yellow: #e5c890; @green: #a6d189; @teal: #81c8be; @sky: #99d1db; @sapphire: #85c1dc; @blue: #8caaee; @lavender: #babbf1; @text: #c6d0f5; @subtext1: #b5bfe2; @subtext0: #a5adce; @overlay2: #949cbb; @overlay1: #838ba7; @overlay0: #737994; @surface2: #626880; @surface1: #51576d; @surface0: #414559; @base: #303446; @mantle: #292c3c; @crust: #232634; };
+  @macchiato:     { @rosewater: #f4dbd6; @flamingo: #f0c6c6; @pink: #f5bde6; @mauve: #c6a0f6; @red: #ed8796; @maroon: #ee99a0; @peach: #f5a97f; @yellow: #eed49f; @green: #a6da95; @teal: #8bd5ca; @sky: #91d7e3; @sapphire: #7dc4e4; @blue: #8aadf4; @lavender: #b7bdf8; @text: #cad3f5; @subtext1: #b8c0e0; @subtext0: #a5adcb; @overlay2: #939ab7; @overlay1: #8087a2; @overlay0: #6e738d; @surface2: #5b6078; @surface1: #494d64; @surface0: #363a4f; @base: #24273a; @mantle: #1e2030; @crust: #181926; };
+  @mocha:         { @rosewater: #f5e0dc; @flamingo: #f2cdcd; @pink: #f5c2e7; @mauve: #cba6f7; @red: #f38ba8; @maroon: #eba0ac; @peach: #fab387; @yellow: #f9e2af; @green: #a6e3a1; @teal: #94e2d5; @sky: #89dceb; @sapphire: #74c7ec; @blue: #89b4fa; @lavender: #b4befe; @text: #cdd6f4; @subtext1: #bac2de; @subtext0: #a6adc8; @overlay2: #9399b2; @overlay1: #7f849c; @overlay0: #6c7086; @surface2: #585b70; @surface1: #45475a; @surface0: #313244; @base: #1e1e2e; @mantle: #181825; @crust: #11111b; };
+	@kanagawa:      { @rosewater: #FFC894; @flamingo: #D27E81; @pink: #D27E99; @mauve: #957FB8; @red: #FF5D62; @maroon: #E46876; @peach: #FFA066; @yellow: #E6C384; @green: #98BB6C; @teal: #7AA89F; @sky: #A3D4D5; @sapphire: #7FB4CA; @blue: #7E9CD8; @lavender: #938AA9; @text: #DCD7BA; @subtext1: #D4CEAA; @subtext0: #C8C093; @overlay2: #5F5F7C; @overlay1: #54546D; @overlay0: #49495F; @surface2: #3E3E51; @surface1: #363645; @surface0: #2A2A37; @crust: #0B0B0F; @mantle: #16161D; @base: #1F1F28; }; 
+	@nord:          { @rosewater: #E2BFA9; @flamingo: #EFAB96; @pink: #D6A3DE; @mauve: #B48EAD; @red: #BF616A; @maroon: #BF6C61; @peach: #D08770; @yellow: #EBCB8B; @green: #A3BE8C; @teal: #8FBCBB; @sky: #88C0D0; @sapphire: #81A1C1; @blue: #5E81AC; @lavender: #C0A7BB; @text: #ECEFF4; @subtext1: #E5E9F0; @subtext0: #D9DEE8; @overlay2: #C4C9D4; @overlay1: #ACB4C3; @overlay0: #959EB2; @surface2: #7D89A1; @surface1: #67748E; @surface0: #4D576A; @base: #434C5E; @mantle: #3B4252; @crust: #2E3440; @accent: #88C0D0; };  
+	@nordx:         { @rosewater: #E2BFA9; @flamingo: #EFAB96; @pink: #D6A3DE; @mauve: #B48EAD; @red: #BF616A; @maroon: #BF6C61; @peach: #D08770; @yellow: #EBCB8B; @green: #A3BE8C; @teal: #8FBCBB; @sky: #88C0D0; @sapphire: #81A1C1; @blue: #5E81AC; @lavender: #C0A7BB; @text: #ECEFF4; @subtext1: #E5E9F0; @subtext0: #D9DEE8; @overlay2: #C4C9D4; @overlay1: #ACB4C3; @overlay0: #959EB2; @surface2: #7D89A1; @surface1: #434C5E; @surface0: #3B4252; @base: #2E3440; @mantle: #272B35; @crust: #1E2229; };  
+	@rosebox:       { @rosewater: #A57562; @flamingo: #A57562; @pink: #B48EAD; @mauve: #B48EAD; @red: #BF616A; @maroon: #BF616A; @peach: #D08770; @yellow: #EBCB8B; @green: #A3BE8C; @teal: #8FBCBB; @sky: #88C0D0; @sapphire: #88C0D0; @blue: #5E81AC; @lavender: #81A1C1; @text: #A3A5AA; @subtext1: #878991; @subtext0: #6E7177; @overlay2: #5C5C5C; @overlay1: #525252; @overlay0: #474747; @surface2: #3D3D3D; @surface1: #333333; @surface0: #282828; @base: #232323; @mantle: #1E1E1E; @crust: #191919; };  
+	@solarized:     { @rosewater: #E38359; @flamingo: #F18EA8; @pink: #D33682; @mauve: #6C71C4; @red: #DC322F; @maroon: #DC3C2E; @peach: #CB4B16; @yellow: #B58900; @green: #859900; @teal: #2AA198; @sky: #2A91A1; @sapphire: #27A8D3; @blue: #268BD2; @lavender: #8B8FDE; @text: #FDF6E3; @subtext1: #EDE8D6; @subtext0: #E1D7B7; @overlay2: #93A1A1; @overlay1: #759FA3; @overlay0: #6AA8AF; @surface2: #338199; @surface1: #266173; @surface0: #0A4C5C; @base: #073642; @mantle: #002B36; @crust: #002129; };  
+	@gruvbox:       { @rosewater: #F38019; @flamingo: #CFA2AE; @pink: #B16276; @mauve: #B16286; @red: #CC241D; @maroon: #CC311D; @peach: #D65D0E; @yellow: #D79921; @green: #98971A; @teal: #66981A; @sky: #1A984C; @sapphire: #1A8598; @blue: #458588; @lavender: #926FAF; @text: #FBF1C7; @subtext1: #D5C4A1; @subtext0: #BDAE93; @overlay2: #97897D; @overlay1: #7C6F64; @overlay0: #665C54; @surface2: #504945; @surface1: #3C3836; @surface0: #32302F; @base: #282828; @mantle: #1D2021; @crust: #131516; };  
+	@biscuit:       { @rosewater: #dbb17f; @flamingo: #cd627b; @pink: #ae3f82; @mauve: #7b3d79; @red: #cf223e; @maroon: #cf3022; @peach: #e39c45; @yellow: #e3bb45; @green: #959a6b; @teal: #768f80; @sky: #768f86; @sapphire: #4f5476; @blue: #614f76; @lavender: #756d94; @text: #ffe9c7; @subtext1: #dcc9bc; @subtext0: #c2b2b2; @overlay2: #ae9898; @overlay1: #9c8181; @overlay0: #8c6e6e; @surface2: #725a5a; @surface1: #644f4f; @surface0: #534141; @base: #453636; @mantle: #2d2424; @crust: #1a1515; }; 
+	@material-mint: { @rosewater: #F5E0DC; @flamingo: #F2CDCD; @pink: #F5C2E7; @mauve: #CBA6F7; @red: #F38BA8; @maroon: #EBA0AC; @peach: #FAB387; @yellow: #F9E2AF; @green: #A6E3A1; @teal: #BDD6DB; @sky: #89DCEB; @sapphire: #74C7EC; @blue: #87B0F9; @lavender: #B4BEFE; @text: #BDD6DB; @subtext1: #A2C6CD; @subtext0: #88B6BF; @overlay2: #6DA5B0; @overlay1: #56939F; @overlay0: #477A85; @surface2: #39626A; @surface1: #2B4950; @surface0: #1D3135; @base: #121F21; @mantle: #0B1214; @crust: #05090A; }  
+}
+
+#catppuccin(@lookup, @accent, @contrast) {
+  // unpacking the color codes from the current @lookup flavor
+  @rosewater: @catppuccin[@@lookup][@rosewater];
+  @flamingo: @catppuccin[@@lookup][@flamingo];
+  @pink: @catppuccin[@@lookup][@pink];
+  @mauve: @catppuccin[@@lookup][@mauve];
+  @red: @catppuccin[@@lookup][@red];
+  @maroon: @catppuccin[@@lookup][@maroon];
+  @peach: @catppuccin[@@lookup][@peach];
+  @yellow: @catppuccin[@@lookup][@yellow];
+  @green: @catppuccin[@@lookup][@green];
+  @teal: @catppuccin[@@lookup][@teal];
+  @sky: @catppuccin[@@lookup][@sky];
+  @sapphire: @catppuccin[@@lookup][@sapphire];
+  @blue: @catppuccin[@@lookup][@blue];
+  @lavender: @catppuccin[@@lookup][@lavender];
+  @text: @catppuccin[@@lookup][@text];
+  @subtext1: @catppuccin[@@lookup][@subtext1];
+  @subtext0: @catppuccin[@@lookup][@subtext0];
+  @overlay2: @catppuccin[@@lookup][@overlay2];
+  @overlay1: @catppuccin[@@lookup][@overlay1];
+  @overlay0: @catppuccin[@@lookup][@overlay0];
+  @surface2: @catppuccin[@@lookup][@surface2];
+  @surface1: @catppuccin[@@lookup][@surface1];
+  @surface0: @catppuccin[@@lookup][@surface0];
+  @base: @catppuccin[@@lookup][@base];
+  @mantle: @catppuccin[@@lookup][@mantle];
+  @crust: @catppuccin[@@lookup][@crust];
+  @accent-color: @catppuccin[@@lookup][@@accent];
+  @contrast-color: @catppuccin[@@lookup][@@contrast];
+
+	--accent-1: @accent-color;
+	--accent-2: @accent-color;
+	--accent-3: @accent-color;
+	--accent-4: darken(@accent-color, 8%);
+	--accent-5: darken(@accent-color, 16%);
+	--mention: rgba(@accent-color, 0.1);
+	--mention-hover: rgba(@accent-color, 0.05);
+	--online-indicator: if(@online-indicator,@green,var(--accent-3)); /* change to #23a55a for default green */
+	--dnd-indicator: @red; /* change to #f13f43 for default red */
+	--idle-indicator: @yellow; /* change to #f0b232 for default yellow */
+	--streaming-indicator: @lavender; /* change to #f0b232 for default yellow */
+
+	--text-0: var(--bg-4); /* text on colored elements */
+	--text-1: lighten(@text, 8%); /* bright text on colored elements */
+	--text-2: @text; /* bright text on colored elements */
+	--text-3: @subtext0; /* normal text */
+	--text-4: @overlay1; /* icon buttons and channels */
+	--text-5: @surface2; /* muted channels/chats and timestamps */
+	--bg-1: @surface1; /* dark buttons when clicked */
+	--bg-2: @surface0; /* dark buttons */
+	--bg-3: if(@invert-bg,@base,@mantle); /* spacing, secondary elements */
+	--bg-4: if(@invert-bg,@mantle,@base); /* main background color */
+	--hover: rgba(lighten(@surface0, 30%), 0.1); /* channels and buttons when hovered */
+	--active: rgba(lighten(@surface0, 30%), 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(hue(@base), 0%, 0%, 0.1); /* messages when hovered */
+
+  --cb-bubble-background: if(@invert-bg,@base,lighten(@base,4%)); /* message bubble background */
+  --cb-bubble-background-hover: if(@invert-bg,darken(@base, 2%),lighten(@base,2%)); /* message bubble background hover */
+  --cb-bubble-background-self: rgba(@contrast-color, 10%);
+  --cb-bubble-background-hover-self: rgba(darken(@contrast-color,5%), 10%);
+  --cb-text-normal-self: lighten(@contrast-color, 10%);
+  --cb-text-muted-self: @contrast-color;
+}
+
+
+:root {
+	#catppuccin(@flavor, @accentColor, @contrastColor);
+}
+
+/* minified memberlist (midnight theme version) */
+:root {
+	& when (@responsive) {
+  	--collapsed: 62px;
+  	--expanded: 240px;
+  	--transition: 0.2s ease-out;
+		.membersWrap__90226 {
+  		min-width: unset;
+  		width: var(--collapsed);
+  		transition: var(--transition);
+  		height: 100%;
+		}
+		.members__9f47b,
+		.container_b2ce9c {
+  		width: var(--collapsed);
+  		transition: var(--transition);
+		}
+		.membersWrap__90226:hover,
+		.membersWrap__90226:hover .members__9f47b,
+		.container_b2ce9c:hover {
+  		width: var(--expanded);
+		}
+		.membersGroup__85843 {
+  		height: 0;
+  		padding-top: 0;
+  		transition: var(--transition);
+		}
+		.membersWrap__90226:hover .membersGroup__85843 {
+  		padding: 24px 8px 0 16px;
+  		height: 40px;
+		}
+		.chat__52833:has(.membersWrap__90226:not(:hover)) .searchBar_e0c60b {
+  		width: calc(var(--collapsed) - 24px) !important;
+  		margin-left: calc(var(--spacing) + 8px);
+		}
+	}
+}
+
+// vim:ft=less
+
