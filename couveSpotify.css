@@ -24,7 +24,7 @@
 :root #vc-spotify-info-wrapper {
   padding: 0.375rem 0.5rem;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 :root #vc-spotify-info-wrapper #vc-spotify-album-image {
@@ -33,7 +33,7 @@
 
 :root #vc-spotify-album-expanded-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 0.375rem 0.5rem;
 }
 
@@ -96,6 +96,7 @@
     rgba(0, 0, 0, var(--gradient-end-opacity))
   ) !important;
   border-radius: 0;
+  z-index: 1;
 }
 
 :root
@@ -134,7 +135,7 @@
 }
 :root .vc-spotify-button-row {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 :root #vc-spotify-progress-bar [class^="sliderContainer"] [class^="grabber"] {
@@ -142,7 +143,7 @@
   height: 100% !important;
   border-radius: 0;
   opacity: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 :root #vc-spotify-album-expanded-wrapper + #vc-spotify-progress-bar {
