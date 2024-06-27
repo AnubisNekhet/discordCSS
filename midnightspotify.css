@@ -8,7 +8,7 @@
   padding: 7px;
   margin-left: -17px;
   margin-top: 2px;
-  content: '';
+  content: "";
   background-color: var(--header-primary);
   /* Spotify wave thingy fix */
   /*background-color: hsla(var(--spotify-vencord-text)/1);*/
@@ -16,7 +16,7 @@
 }
 #vc-spotify-song-title + div::before,
 #vc-spotify-song-title + div + div::before {
-   background-color: var(--header-secondary);
+  background-color: var(--header-secondary);
   /* Spotify wave thingy fix */
   /*background-color: hsla(var(--spotify-vencord-text)/1);*/
 }
@@ -34,11 +34,11 @@
 
 /* */
 #vc-spotify-player {
-  height:50px; 
+  height: 50px;
   background: transparent !important;
   position: relative;
   transition: height 0.4s ease;
-  padding: 7px!important;
+  padding: 7px !important;
   padding-top: 8px !important;
   border-bottom: none;
 }
@@ -61,8 +61,10 @@
 #vc-spotify-player:hover .vc-spotify-button-row {
   opacity: 1;
 }
-#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) #vc-spotify-progress-bar,
-#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper) .vc-spotify-button-row {
+#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)
+  #vc-spotify-progress-bar,
+#vc-spotify-player:has(#vc-spotify-album-expanded-wrapper)
+  .vc-spotify-button-row {
   opacity: 1;
 }
 #vc-spotify-player::before,
@@ -115,7 +117,8 @@
   opacity: 1;
   transition: opacity 0.4s ease;
 }
-#vc-spotify-player:not(:has(#vc-spotify-album-expanded-wrapper)):hover #vc-spotify-album-image {
+#vc-spotify-player:not(:has(#vc-spotify-album-expanded-wrapper)):hover
+  #vc-spotify-album-image {
   opacity: 0;
 }
 #vc-spotify-album-image:hover {
@@ -125,28 +128,31 @@
   margin-left: 15px;
   transition: margin-left 0.4s ease;
 }
-#vc-spotify-player:hover #vc-spotify-titles  {
+#vc-spotify-player:hover #vc-spotify-titles {
   margin-left: -42px;
 }
-#vc-spotify-player #vc-spotify-titles .size14_b2af01 {
+#vc-spotify-player #vc-spotify-titles .size14_fb468f {
   font-size: 13px;
 }
-#vc-spotify-song-title::before, #vc-spotify-song-title + div::before, #vc-spotify-song-title + div + div::before {
+#vc-spotify-song-title::before,
+#vc-spotify-song-title + div::before,
+#vc-spotify-song-title + div + div::before {
   background-color: var(--interactive-active);
 }
-#vc-spotify-player .colorStandard__5111e {
+#vc-spotify-player .colorStandard_fbc755 {
   color: var(--interactive-active);
 }
-.vc-spotify-artist, .vc-spotify-album {
+.vc-spotify-artist,
+.vc-spotify-album {
   color: var(--interactive-normal);
 }
-#vc-spotify-player .bar_e58961 {
-  background-color: #FFFFFF22;
+#vc-spotify-player .bar_c7a159 {
+  background-color: #ffffff22;
 }
-#vc-spotify-player .barFill__30e17 {
+#vc-spotify-player .barFill_c7a159 {
   background-color: var(--interactive-active);
 }
-#vc-spotify-progress-bar>[class^=slider] [class^=grabber] {
+#vc-spotify-progress-bar > [class^="slider"] [class^="grabber"] {
   background-color: var(--interactive-active);
   border-color: var(--interactive-active);
   width: 12px !important;
@@ -161,20 +167,24 @@
   color: var(--interactive-active);
 }
 .vc-spotify-button:hover {
-  background-color: color-mix(in srgb, var(--interactive-active), transparent 75%);
+  background-color: color-mix(
+    in srgb,
+    var(--interactive-active),
+    transparent 75%
+  );
 }
 .vc-spotify-button.vc-spotify-shuffle-on {
   color: var(--green-360);
 }
 .vc-spotify-button.vc-spotify-shuffle-on:hover {
-  background-color: color-mix(in srgb, var(--green-360), transparent 75%);;
-} 
+  background-color: color-mix(in srgb, var(--green-360), transparent 75%);
+}
 /* */
 /* adding this to force update */
 
 #app-mount #vc-spotify-player + div {
   background: transparent;
 }
-.panels__58331 {
+.panels_a4d4d9 {
   background: var(--bg-4);
 }
